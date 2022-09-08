@@ -11,7 +11,7 @@ def main():
     month = 1
     counter = 0 
     totalsteps = 0
-
+    outfile.write('Month, Average Steps' +'\n')
     for record in csvfile:
         if int(record[0]) == month:
             
@@ -24,7 +24,7 @@ def main():
             monthrecords = str(month)
             stepsrecords = str(avgsteps)
             
-            outfile.write(monthslist[month-1]+',')
+            outfile.write(monthslist[month-1]+', ')
             outfile.write(str(avgsteps) + '\n')
             counter = 1
             totalsteps = int(record[1])
